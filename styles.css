@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+}
+
+/* Navbar */
+
+nav{
+    display: flex;
+    min-height: 8vh;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f6d743;
+    position: sticky;
+    top: 0;
+}
+.brand-name{
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Dancing Script', cursive;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 50%;
+    transition: all 0.5s ease;
+}
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 10px;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width:910px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f6d743;
+        transform: translateX(100%);
+        width: 40%;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+/* Title */
+#title{
+    background-image: url("photos/kebap4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-color: black;
+    padding: 300px;
+    text-align: center;
+}
+
+
+#title h1 {
+    color: rgb(245,245,245);
+    font-size: 50px;
+}
+
+@media screen and (max-width:910px){
+    #title{
+        padding: 220px 20px;
+    }
+}
+
+/* About Us */
+#about-us{
+    background-color: #fadf59;
+    padding: 70px 100px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about-us img {
+    width: 40%;
+    
+}
+
+.about-text{
+    width: 50%;
+    font-size: 20px;
+}
+
+@media screen and (max-width:910px){
+    #about-us{
+        padding: 50px 20px;
+        display: block;
+        text-align: center;
+    }
+    #about-us img {
+        width: 100%;
+        
+    }
+    .about-text{
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+/* Restaurants */
+
+#restaurants{
+    background-image: url("photos/restaurant-back.jpg");
+    padding: 70px 100px;
+}
+
+.restaurants-title{
+    color:rgb(245, 245, 245);
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+.restaurants-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.restaurant{
+    text-align: center;
+    width:90%;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 50px 10px;
+    background-size: cover;
+    background-position: center;
+    margin: 5%;
+    color: black;
+}
+.r1{
+    background-image: url("photos/restaurant1.jpg");
+}
+.r2{
+    background-image: url("photos/restaurant2.jpeg");
+}
+.r3{
+    background-image: url("photos/restaurant3.jpg");
+}
+.r4{
+    background-image: url("photos/restaurant4.jpg");
+}
+
+.restaurant a{
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width: 910px) {
+    .restaurants-row { 
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    #restaurants{
+        padding: 50px 20px;
+    }
+
+}
+
+/* Gallery */
+#gallery{
+    background-color: #fadf59;
+    padding: 70px 100px;
+}
+#gallery h1{
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+.photos-row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.photos-row img{
+    width: 90%;
+    margin: 20px 0 0 5%;
+    border: 5px;
+}
+
+@media screen and (max-width: 910px) {
+    #gallery{
+        padding:20px 0;
+    }
+    .photos-row{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .photos-row img{
+        width: 90%;
+        margin: 20px 0 0 5%;
+    }
+}
+
+/* Contact */
+#contact{
+    height: 800px;
+    background-image: url(photos/contact.jpg);
+    background-size: cover;
+    padding: 70px 100px;
+}
+#contact h1{
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: rgb(245, 244, 244);
+}
+
