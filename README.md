@@ -1,0 +1,3 @@
+# firavin
+
+a static website
